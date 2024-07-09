@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Title</title>
+    <STYLE>
+        body {
+    text-align: center;
+}
+
+textcols {
+    margin-top: 30px;
+	text-align: center
+}
+
+textcols-item {
+	white-space: normal;
+	display: inline-block;
+	width: 48%;
+	vertical-align: top;
+}
+
+textcols .textcols-item:first-child {
+	margin-right: 4%;
+}
+
+div.button {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
+}
+
+pointtext {
+    margin-top: 30px;
+    text-align: center
+}
+    </STYLE>
+</head>
+<body>
+
+        <textcols-item>
+        <h3> Пункт отправления</h3>
+            {% for dval in items_dep%}
+                 <p>{{dval}}</p> </br>
+            {% endfor %}
+        </textcols-item>
+
+
+        <textcols-item>
+        <h3> Пункт назначения</h3>
+            {% for aval in items_arr%}
+                <p>{{aval}}</p> </br>
+            {% endfor %}
+        </textcols-item>
+        <a class="collapse-item" href="{% url 'main' %}">Назад</a>
+</body>
+
+
+

@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+}
+
+textcols {
+    margin-top: 30px;
+	text-align: center
+}
+
+textcols-item {
+	white-space: normal;
+	display: inline-block;
+	width: 48%;
+	vertical-align: top;
+}
+
+textcols .textcols-item:first-child {
+	margin-right: 4%;
+}
+
+div.button {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
+}
+
+pointtext {
+    margin-top: 30px;
+    text-align: center
+}

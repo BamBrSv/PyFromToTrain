@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">-->
+    <title>Title</title>
+    <STYLE>
+        body {
+    text-align: center;
+}
+
+textcols {
+    margin-top: 30px;
+	text-align: center
+}
+
+textcols-item {
+	white-space: normal;
+	display: inline-block;
+	width: 48%;
+	vertical-align: top;
+}
+
+textcols .textcols-item:first-child {
+	margin-right: 4%;
+}
+
+div.button {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
+}
+
+div.row {
+    margin: 0;
+    vertical-align: top;
+    text-align:center;
+}
+
+p {
+    padding: 0;
+    text-align:center;
+}
+
+pointtext {
+    margin-top: 30px;
+    text-align: center
+}
+
+div.features{
+border: 3px solid #000;
+border-radius: 10px;
+padding: 1%;
+margin: 20%;
+background: #c0e6fc;
+ text-align:center;
+
+}
+form {
+
+    text-align:center;
+
+    width: 400px;
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
+
+    </STYLE>
+</head>
+<body>
+<div class="features">
+<form method="POST">
+    {% csrf_token %}
+    <div  class="col">
+<!--    {{ form.as_p }}-->
+        </div>
+<!--    <p>Логин    <input type="text" class="form-control"></p><br>-->
+    <p>Тип заявки     <input type="text" class="form-control"></p><br>
+    <p>ФИО заявителя     <textarea class="form-control"></textarea></p><br>
+    <p>Дата     <input type="date" class="form-control">          Время     <input type="time" class="form-control"></p><br>
+    <p>Адресс     <textarea class="form-control"></textarea></p><br>
+    <p>Описание     <textarea class="form-control"></textarea></p><br>
+
+    <input type="Submit" name="submit" value="Новая заявка"/>
+</form>
+</div>
+ <pointtext>
+
+    {% block content %}
+    {% endblock %}
+
+ </pointtext>
+
+</body>
+</html>
